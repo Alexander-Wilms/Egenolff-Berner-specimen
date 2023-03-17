@@ -1,7 +1,9 @@
 %!TEX program = lualatex
-\documentclass[]{article}
+\documentclass[draft]{article}
 \pagenumbering{gobble}
 \usepackage{geometry}
+%\usepackage{showframe}
+\usepackage{changepage}
 \geometry{
 	paper=a4paper,
 	margin=1.9cm
@@ -15,7 +17,7 @@
 \usepackage{multicol}
 \usepackage[]{stackengine}
 % https://tex.stackexchange.com/questions/61624/adjusting-column-width-in-latex-with-the-multicol-package
-\setlength{\columnsep}{7mm}
+\setlength{\columnsep}{5mm}
 \usepackage[letterspace=200]{microtype}
 \begin{document}
 \centering
@@ -24,7 +26,7 @@
 	\fontsize{40}{35}\selectfont CHARACTERVM SEV \\
 	\huge TYPORUM PROBATIS SIMORVM, \\
 	\LARGE INCONDITE QVIDEM, SED SECVN-\\
-	\large DVM SVAS TAMEN DIFFERENTIAS PRO- \\
+	\Large DVM SVAS TAMEN DIFFERENTIAS PRO- \\
 	\small POSTIVM, TAM IPSIS LIBRORVM AVTORIBVS,\\
 	\scriptsize QVAM TYPOGRAPHIS APPRIME VTILE\\
 	\tiny AT ACCOMMODATVM.\\}
@@ -57,7 +59,7 @@ Deo \& \textls{HVMILIATVM}.\quad  W.\quad H.\quad S.\quad G.\quad \\
 	\justifying
 	\normalsize
 	\justifying
-	Ipſe autem vulneratus \& propter preuaricationes noſtras\newline
+	Ipſe autem vulneratus \& propter preuaricationes noſtras\linebreak
 	\columnbreak
 	\textit{Nec aperuit os ſuum.A carcere \& iudicio sublatus eſt: \& Gene}
 \end{multicols}
@@ -70,13 +72,12 @@ Attritus eſt\hfill[\hfill☞\hfill προς  ήλϑεν  αυτώ  ο εκατ�
 \vspace{-1.05\baselineskip}
 
 \begin{multicols}{2}
-	\begin{sloppypar}\noindent propter iniquitates noſtas,caſtigatio pacis noſtr\ae{} ſuper eum\newline
-		Et liuor eitus ſanitas fuit nobis. Omnes nos ficut oues erraui-\newline
-		mus, vnuſquiſque ad viam ſuam Declinauit,\& Iehouah con\newline
-		iecit in illum iniquitates omnium noſtrum. Oppreſſus fuit,\newline
-		\& ipſe afflictus,\& non Aperuit os ſuum. Sicut agnus ad \textsc{ma}-\newline
-		\textsc{ctationem} ductus eſt, et velut ouis coram tondente ſe obm.\\
-	\end{sloppypar}
+	\noindent propter iniquitates noſtas,caſtigatio pacis noſtr\ae{} ſuper eum\linebreak
+	Et liuor eitus ſanitas fuit nobis. Omnes nos ficut oues erraui-\linebreak
+	mus, vnuſquiſque ad viam ſuam Declinauit,\& Iehouah con\linebreak
+	iecit in illum iniquitates omnium noſtrum. Oppreſſus fuit,\linebreak
+	\& ipſe afflictus,\& non Aperuit os ſuum. Sicut agnus ad \textsc{ma}-\linebreak
+	\textsc{ctationem} ductus eſt, et velut ouis coram tondente ſe obm.\\
 
 	\columnbreak
 
@@ -95,10 +96,10 @@ Attritus eſt\hfill[\hfill☞\hfill προς  ήλϑεν  αυτώ  ο εκατ�
 	\centering
 	Romain Gros Text de Garamond\linebreak
 	\small
-	\qquad Videbit ſemen prolongabit dies, \& voluntas Jehou\ae{} in Manu eius\newline
-	proſperabitur. Propter laborem anim\ae{} ſu\ae{} videbit fructum quo ſa\newline
-	turabitur, ſcientia ſui iuſtificabit iuſtus ſeruus meus multos, \& iniqui\newline
-	tates ipſorium ipſe portabit. Ideo partem dabo ei cum multis \& cum\newline
+	\qquad Videbit ſemen prolongabit dies, \& voluntas Jehou\ae{} in Manu eius\linebreak
+	proſperabitur. Propter laborem anim\ae{} ſu\ae{} videbit fructum quo ſa\linebreak
+	turabitur, ſcientia ſui iuſtificabit iuſtus ſeruus meus multos, \& iniqui\linebreak
+	tates ipſorium ipſe portabit. Ideo partem dabo ei cum multis \& cum\linebreak
 	fortibus diuidet ſpolia, Et quod effudit in \textsc{mortem animam} ſuam,
 
 
@@ -113,15 +114,21 @@ Attritus eſt\hfill[\hfill☞\hfill προς  ήλϑεν  αυτώ  ο εκατ�
 	\textit{}
 \end{multicols}
 
-\fraktur
-\tiny
-\noindent
-Prob vnd Abtruck Der fürnemſten vnd allerschönſten Schrifften ſo jemals an tag kommen/ mit groſſer mühe und koſten / anfangs durch Weiland Chriſtian Egenolffs erſten Buch\newline
-truckers in Franckfurt ſelbſten/vnd dann ſeine witib. Nachmals aber durch deren ſelben Erben/ als nemlich Jacob Sabon vnd Conrad Berner mit allem fleiß zuſammen gebracht/ vnd\newline
-zu beförderung aller deren ſo ſich der federen gebrauchen/fürnemlich aber zu beſonderem vortheil den Autoribus der \normalfont Exemplarien publicirt\fraktur / darinnen ſie ſich zuerſehen/ mit was Schri\newline
-fften ihre weck mögen verfertiget werden/so wol auch allen vnd jeden Schrifftgieſſern/ vnd Buchdruckern nützlich/nachzuſehen was in eines jeden Truckeren vnnd bereitſchafft dienſtlich\newline
-ſein möge. Nach dem aber die Teuſchten und Hebraiſchen ſchrifften nicht ſonderlich hoch geachtet/ als ſindt die selbige wie dann auch etliche andere Latinische nicht hieher heſetzt/ ob wol\newline
-% https://www.etymonline.com/word/copious
-auch die beſten vnder den ſelbigen \normalfont In Copia \fraktur verhanden. Und man findet allerhand Abschläge Teutsch Latinisch Griechisch und Hebraisch zu vberlaſſen vnd zuuerkauffen/ zugieſſen aber\newline
-ſind ſie ſamptlich vorhanden. Verfertiget durch Conrad Berner Anno 1592
+\begin{adjustwidth}{2.3cm}{2.3cm}
+	\fraktur
+	\tiny
+	\noindent
+	Prob vnd Abtruck Der fürnemſten vnd allerschönſten Schrifften ſo jemals an tag kommen/ mit groſſer mühe und koſten / anfangs durch Weiland Chriſtian Egenolffs erſten Buch\linebreak
+	truckers in Franckfurt ſelbſten/vnd dann ſeine witib. Nachmals aber durch deren ſelben Erben/ als nemlich Jacob Sabon vnd Conrad Berner mit allem fleiß zuſammen gebracht/ vnd\linebreak
+	zu beförderung aller deren ſo ſich der federen gebrauchen/fürnemlich aber zu beſonderem vortheil den Autoribus der \normalfont Exemplarien publicirt\fraktur / darinnen ſie ſich zuerſehen/ mit was Schri\linebreak
+	fften ihre weck mögen verfertiget werden/so wol auch allen vnd jeden Schrifftgieſſern/ vnd Buchdruckern nützlich/nachzuſehen was in eines jeden Truckeren vnnd bereitſchafft dienſtlich\linebreak
+	ſein möge. Nach dem aber die Teuſchten und Hebraiſchen ſchrifften nicht ſonderlich hoch geachtet/ als ſindt die selbige wie dann auch etliche andere Latinische nicht hieher heſetzt/ ob wol\linebreak
+	% https://www.etymonline.com/word/copious
+	auch die beſten vnder den ſelbigen \normalfont In Copia \fraktur verhanden. Und man findet allerhand Abschläge Teutsch Latinisch Griechisch und Hebraisch zu vberlaſſen vnd zuuerkauffen/ zugieſſen aber\linebreak
+	ſind ſie ſamptlich vorhanden. Verfertiget durch Conrad Berner Anno 1592
+\end{adjustwidth}
+
+
+
+
 \end{document}
