@@ -1,3 +1,8 @@
+## Custom patterns
+*.pdf
+# backup created by latexindent
+*.bak*
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
