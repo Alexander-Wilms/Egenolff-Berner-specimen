@@ -19,12 +19,20 @@
 % https://tex.stackexchange.com/questions/61624/adjusting-column-width-in-latex-with-the-multicol-package
 \setlength{\columnsep}{5mm}
 \usepackage[letterspace=200]{microtype}
+\newcommand{\threecolumntypefacenames}[3]{\begin{multicols}{3}
+		\tiny
+		\hfill \qquad \qquad \qquad \qquad #1\hspace*{\fill}\\
+		\columnbreak
+		\hfill #2\hspace*{\fill}\\
+		\columnbreak
+		\hfill #3\qquad \qquad \qquad \qquad \hspace*{\fill}
+\end{multicols}}
 \begin{document}
 \centering
 \textls{
 	\LARGE SPECIMEN \\
 	\fontsize{40}{35}\selectfont CHARACTERVM SEV \\
-	\huge TYPORUM PROBATIS SIMORVM, \\
+	\huge TYPORUM PROBATIS SIMORVM\kern-3pt, \\
 	\LARGE INCONDITE QVIDEM, SED SECVN-\\
 	\Large DVM SVAS TAMEN DIFFERENTIAS PRO- \\
 	\small POSTIVM, TAM IPSIS LIBRORVM AVTORIBVS,\\
@@ -51,10 +59,10 @@ faciel Ab eo,deſpectus inquam, \& non putauimus eum. Ver\`e languores noſtros 
 \& dolores noſtros portauit, nos Autem reputauimus Eum plagis affectum, Percuſſum \`a\\
 \centering
 Deo \& \textls{HVMILIATVM}.\quad  W.\quad H.\quad S.\quad G.\quad \\
-\tiny
-\hfill Romain Parangon de Garamond \hfill Gr\ae{}c. Parangon de Robert GranIon \hfill Curſiff Parangon de GranIon \hspace*{\fill}
-\scriptsize
+\vspace{-\baselineskip}
+\threecolumntypefacenames{Romain Parangon de Garamond}{Gr\ae{}c. Parangon deRobert GranIon\quad \quad \quad \quad \quad \quad \quad \quad }{Curſiff Parangon de GranIon}
 \vspace*{-\baselineskip}
+\scriptsize
 \begin{multicols}{2}
 	\justifying
 	\normalsize
@@ -112,7 +120,9 @@ Attritus eſt\hfill[\hfill☞\hfill προς  ήλϑεν  αυτώ  ο εκατ�
 	\noindent
 	\textit{}
 \end{multicols}
-
+\threecolumntypefacenames{Romain S. Auguſtin de Garamond}{Gr\ae{}c. S. Auguſtin de GranIon}{Curſ. S. Auguſtin de GranIon}
+\threecolumntypefacenames{Romain Cicero de Garamond}{Gr\ae{}c. Cicero de GranIon}{Curſ. Cicero de GranIon}
+\threecolumntypefacenames{Romain Garamond de Garamond}{Gr\ae{}c. Garamond de GranIon}{Curſ. Garamond ou Immortel de GranIon}
 \begin{adjustwidth}{2.3cm}{2.3cm}
 	\fraktur
 	\tiny
@@ -126,8 +136,4 @@ Attritus eſt\hfill[\hfill☞\hfill προς  ήλϑεν  αυτώ  ο εκατ�
 	auch die beſten vnder den ſelbigen \normalfont In Copia \fraktur verhanden. Und man findet allerhand Abschläge Teutsch Latinisch Griechisch und Hebraisch zu vberlaſſen vnd zuuerkauffen/ zugieſſen aber\linebreak
 	ſind ſie ſamptlich vorhanden. Verfertiget durch Conrad Berner Anno 1592
 \end{adjustwidth}
-
-
-
-
 \end{document}
