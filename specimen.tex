@@ -1,5 +1,5 @@
 %!TEX program = lualatex
-\documentclass[draft]{article}
+\documentclass[]{article}
 \pagenumbering{gobble}
 \usepackage{geometry}
 %\usepackage{showframe}
@@ -18,7 +18,7 @@
 \usepackage[]{stackengine}
 % https://tex.stackexchange.com/questions/61624/adjusting-column-width-in-latex-with-the-multicol-package
 \setlength{\columnsep}{5mm}
-\usepackage[letterspace=200]{microtype}
+\usepackage[]{microtype}
 \newcommand{\threecolumntypefacenames}[3]{\begin{multicols}{3}
 		\tiny
 		\hfill \qquad \qquad \qquad \qquad #1\hspace*{\fill}\\
@@ -28,16 +28,18 @@
 		\hfill #3\qquad \qquad \qquad \qquad \hspace*{\fill}
 \end{multicols}}
 \begin{document}
+\addfontfeature{RawFeature=+hlig}
+\addfontfeature{RawFeature=+swsh}
 \centering
-\textls{
-	\LARGE SPECIMEN \\
-	\fontsize{40}{35}\selectfont CHARACTERVM SEV \\
-	\huge TYPORUM PROBATIS SIMORVM\kern-3pt, \\
-	\LARGE INCONDITE QVIDEM, SED SECVN-\\
-	\Large DVM SVAS TAMEN DIFFERENTIAS PRO- \\
-	\small POSTIVM, TAM IPSIS LIBRORVM AVTORIBVS,\\
-	\scriptsize QVAM TYPOGRAPHIS APPRIME VTILE\\
-	\tiny AT ACCOMMODATVM.\\}
+{{\addfontfeature{LetterSpace=20}
+		\fontsize{19}{16}\selectfont  SPECIMEN \\
+		\fontsize{41}{33}\selectfont CHARACTERVM SEV \\
+		\fontsize{23}{25}\selectfont TYPORUM PROBATIS SIMORVM\kern-3pt, \\
+		\fontsize{19}{17}\selectfont INCONDITE QVIDEM, SED SECVN\kern-3pt-\\
+		\fontsize{14}{16}\selectfont DVM SVAS TAMEN DIFFERENTIAS PRO\kern-2pt- \\
+		\fontsize{9.5}{11.5}\selectfont POSTIVM, TAM IPSIS LIBRORVM AVTORIBVS\kern-2pt,\\
+		\fontsize{7}{9}\selectfont QVAM TYPOGRAPHIS APPRIME VTILE\\
+		\fontsize{5}{4}\selectfont AT\quad ACCOMMODATVM.\\}
 \justifying
 \huge
 % Isaiah 53
