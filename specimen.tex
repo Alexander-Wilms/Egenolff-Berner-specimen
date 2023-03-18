@@ -1,19 +1,19 @@
 %!TEX program = lualatex
-\documentclass[letterpaper]{article}
+\documentclass{article}
 \pagenumbering{gobble}
 % width of DIN A4, height scaled so it has the same ratio as the original: 30.5 cm x 48.2 cm
 % https://sammlungen.ub.uni-frankfurt.de/drucke/content/titleinfo/7499387
-\usepackage[paperwidth=21cm,paperheight=33.2cm,margin=1.5cm]{geometry}
+\usepackage[paperwidth=21cm,paperheight=33.2cm,margin=1.3cm]{geometry}
 %\usepackage{showframe}
 \usepackage{changepage}
-\usepackage[]{fontspec}
+\usepackage{fontspec}
 \setmainfont{EB Garamond}
 \usepackage[document]{ragged2e}
 % https://www.1001fonts.com/zentenar-fraktur-font.html
 % https://tex.stackexchange.com/a/37251/38905
 \newfontfamily\fraktur{Zentenar Fraktur}
 \usepackage{multicol}
-\usepackage[]{stackengine}
+\usepackage{stackengine}
 \usepackage{scalerel}
 % https://tex.stackexchange.com/questions/61624/adjusting-column-width-in-latex-with-the-multicol-package
 \setlength{\columnsep}{4mm}
@@ -59,6 +59,7 @@ ctus fuit \& Reiectus inter viros vir dolorum, \& expertus Infirmitatem, \& velu
 faciel Ab eo,deſpectus inquam, \& non putauimus eum. Ver\`e languores noſtros ipſe tulit, \\
 \& dolores noſtros portauit, nos Autem reputauimus Eum plagis affectum, Percuſſum \`a\\
 \centering
+% these letters might not mean anything and just showcase the typeface, similar to the \AE and \OE charcters in the previous paragraph
 Deo \& \textls{HVMILIATVM}.\quad  W.\quad H.\quad S.\quad G.\quad \\
 \vspace{-\baselineskip}
 \threecolumntypefacenames{Romain Parangon de Garamond}{Gr\ae{}c. Parangon deRobert GranIon\quad \quad \quad \quad \quad \quad \quad \quad }{Curſiff Parangon de GranIon}
@@ -103,6 +104,7 @@ Attritus eſt\hfill[\hfill☞\hfill προς  ήλϑεν  αυτώ  ο εκατ�
 	\tiny
 	\centering
 	Romain Gros Text de Garamond\\
+	\vspace{0.5\baselineskip}
 	\small
 	\justifying
 	\noindent \qquad Videbit ſemen prolongabit dies, \& voluntas Jehou\ae{} in Manu eius\linebreak
@@ -114,30 +116,36 @@ Attritus eſt\hfill[\hfill☞\hfill προς  ήλϑεν  αυτώ  ο εκατ�
 	\columnbreak
 	\tiny
 	\centering
-	Curſ. Gros Text de GronIon
-
+	Curſ. Gros Text de GronIon\\
+	\vspace{0.5\baselineskip}
 	\small
 	\justifying
 	\noindent
-	\textit{Et eum pr\ae{}uaricatoribus Annumeratus eſt,ipſe quoque precatum Multorum\linebreak
-		■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\linebreak
-		■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\linebreak
-		■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\linebreak
-		■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\\}
+	\textit{Et eum pr\ae{}uaricatoribus Annumeratus eſt,ipſe quoque pecatum Multorum\linebreak}
+	%\textit{■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\linebreak
+	%	■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\linebreak
+	%	■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\linebreak
+	%	■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\\}
+	% Isaiah 53
+	% https://www.thelatinlibrary.com/bible/isaiah.shtml
+	\textit{tulit et pro transgreſſoribus rogavit auda sterilis quae non paris decanta laudem et hinni qu\ae{} non pariebas quoniam multi filii deſert\ae{} magis quam eius qu\ae{} habebat virum dicit Dominus, \& dilata locum tentorii tui et pelles tabernaculorum tuorum extende ne parcas longos fac funiculos tuos\\}
 \end{multicols}
 \vspace{-2.2\baselineskip}
 \threecolumntypefacenames{Romain S. Auguſtin de Garamond}{Gr\ae{}c. S. Auguſtin de GranIon}{Curſ. S. Auguſtin de GranIon}
-\vspace{-2.2\baselineskip}
+\vspace{-2\baselineskip}
 \begin{multicols}{2}
 	\fontsize{8}{9}\selectfont
 	\justifying
 	\noindent \quad Ad dexteram enim \& ſiniſtram dilataberis, ſemen quoq: tuum Gentes h\ae{}redi\linebreak
 
 	\columnbreak
-	\fontsize{7}{9}\selectfont
+	\fontsize{8}{9}\selectfont
 	\justifying
 	\noindent
-	\textit{■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■}
+	%\textit{■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■}
+	% Biblia sacra variarum translationum: tribus tomis distincta, Volume 2, p. 565
+	% https://books.google.de/books?id=je_TuKNpuDEC&lpg=PA565&ots=xSXGcUmhcq&dq=%22dixit%20deus%20tuus%22%20%22congregabit%20se%20populus%22&pg=PA565#v=onepage&q=%22dixit%20deus%20tuus%22%20%22congregabit%20se%20populus%22&f=false
+	\textit{Quia ficut mulierem derelictam \& dolore affectam spiritu, vocavis te Iehouah, \& uxo}
 \end{multicols}
 \fontsize{8}{9}\selectfont
 \vspace{-2.3\baselineskip}
@@ -153,15 +161,15 @@ Attritus eſt\hfill[\hfill☞\hfill προς  ήλϑεν  αυτώ  ο εκατ�
 	Sanctus Iſraelis,Deus vniuerſ\ae{} vocatur.
 
 	\columnbreak
-	\fontsize{7}{9}\selectfont
+	\fontsize{8}{9}\selectfont
 	\justifying
 	\noindent
-	\textit{Quum rependata fueris,dixit Deus tuus. Momento paruo dereliquitem at in Miſeratio-\linebreak
-		nibus magnis congregabo te. In momento ir\ae{} abſcondi faciem Meam ad momentum \`a te\linebreak
+	\textit{Quum rependata fueris,dixit Deus tuus. Momento paruo dereliqui te at in Miſeratio-\linebreak
+		nibus magnis congregabo te. In momento ir\ae{} abſcondi faciem Meam ad momentum \`a te.\linebreak
 		In miſericordia ſempiterna Miſertus ſum tui, dixit Redemptor tuus Iehouah.}
 \end{multicols}
 \threecolumntypefacenames{Romain Cicero de Garamond}{Gr\ae{}c. Cicero de GranIon}{Curſ. Cicero de GranIon}
-\vspace{-3\baselineskip}
+\vspace{-2.5\baselineskip}
 \begin{multicols}{2}
 	\fontsize{7}{8}\selectfont
 	\justifying
@@ -242,6 +250,7 @@ Attritus eſt\hfill[\hfill☞\hfill προς  ήλϑεν  αυτώ  ο εκατ�
 	\columnbreak
 
 	\centering
+	\tiny
 	Rom. Non parel.\\
 	\fontsize{3}{3.75}\selectfont
 	\justifying
@@ -253,6 +262,7 @@ Attritus eſt\hfill[\hfill☞\hfill προς  ήλϑεν  αυτώ  ο εκατ�
 	\columnbreak
 
 	\centering
+	\tiny
 	Curſ. Petit Text de G.\\
 	\fontsize{4}{5}\selectfont
 	\justifying
@@ -264,6 +274,7 @@ Attritus eſt\hfill[\hfill☞\hfill προς  ήλϑεν  αυτώ  ο εκατ�
 	\columnbreak
 
 	\centering
+	\tiny
 	Curſ.Non parel.\\
 	\fontsize{3}{3.75}\selectfont
 	\justifying
