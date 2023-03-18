@@ -12,6 +12,10 @@
 % https://www.1001fonts.com/zentenar-fraktur-font.html
 % https://tex.stackexchange.com/a/37251/38905
 \newfontfamily\fraktur{Zentenar Fraktur}
+% https://github.com/georgd/EB-Garamond/issues/151#issuecomment-1474443214
+% https://en.wikipedia.org/wiki/Grecs_du_roi#Digitizations
+% https://web.archive.org/web/20051017031544/http://www.flf.vu.lt:80/strockis/grecswg.zip
+\newfontfamily\grecs{Grecs du roi WG}
 \usepackage{multicol}
 \usepackage{stackengine}
 \usepackage{scalerel}
@@ -26,6 +30,7 @@
 		\columnbreak
 		\hfill #3\qquad \qquad \qquad \qquad \hspace*{\fill}
 \end{multicols}}
+\newcommand{\greektext}{\grecs wro jhlqen autw o ekaton zarcoj, wzakalwn auton k legwn,Kurie o paij mou beblh "\normalfont}
 \begin{document}
 \addfontfeature{RawFeature=+hlig}
 \addfontfeature{RawFeature=+swsh}
@@ -78,7 +83,9 @@ Deo \& \textls{HVMILIATVM}.\quad  W.\quad H.\quad S.\quad G.\quad \\
 \justifying
 \noindent
 % Greek text transcribed using Google Lens
-Attritus eſt\hfill[\hfill☞\hfill προς  ήλϑεν  αυτώ  ο εκατον Ταρχος,  αξακαλών αυτον κ λέγων, Κύριε ο  παις μᴕ βεβλη\hfill ☜\hfill ]\hfill \textit{rationem eius}
+Attritus eſt\hfill[\hfill☞\hfill \greektext \grecs{}  wza. ■■. \normalfont%
+	% προς  ήλϑεν  αυτώ  ο εκατον Ταρχος,  αξακαλών αυτον κ λέγων, Κύριε ο  παις μᴕ βεβλη
+	\hfill ☜\hfill ]\hfill \textit{rationem eius}
 \vspace{-1.05\baselineskip}
 \begin{multicols}{2}
 	\noindent propter iniquitates noſtas,caſtigatio pacis noſtr\ae{} ſuper eum\linebreak
@@ -149,8 +156,8 @@ Attritus eſt\hfill[\hfill☞\hfill προς  ήλϑεν  αυτώ  ο εκατ�
 \end{multicols}
 \fontsize{8}{9}\selectfont
 \vspace{-2.3\baselineskip}
-% Greek text transcribed using Google Lens
-\noindent tate accipiet,\& ciuitates\hfill\hfill {\normalsize [ ☞}\hfill ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\hfill{\normalsize ☜ ]}\hfill \textit{rem Adoleſcentis}
+% Mostly the same as above
+\noindent tate accipiet,\& ciuitates\hfill\hfill {\normalsize [ ☞}\hfill \grecs DIa. \greektext ■ ■■ ■■■■■ \grecs wza ■■■oj ■■■ DIa \normalfont \hfill{\normalsize ☜ ]}\hfill \textit{rem Adoleſcentis}
 \vspace{-1.2\baselineskip}
 \begin{multicols}{2}
 	\fontsize{8}{9}\selectfont
@@ -243,7 +250,7 @@ Attritus eſt\hfill[\hfill☞\hfill προς  ήλϑεν  αυτώ  ο εκατ�
 	\fontsize{4}{5}\selectfont
 	\justifying
 	\noindent \quad Ecce teſtem populis dedi eum,ducem \& pr\ae{}ceptorem po\linebreak
-	pulis. En gen ( ■■ ■■■■■■ ■■■■■■■ ■■■■ ) tem quam non\linebreak
+	pulis. En gen ( ■■ ■■■■■■ ■■■■■■■ βαμ■ ) tem quam non\linebreak
 	noſti vocabis as te \& gentes qu\ae{} non nouerunt te. current pro\linebreak
 	pter Iehouam Deum tuum, \& Sanctum Iſraelis. Quia glorifica
 
