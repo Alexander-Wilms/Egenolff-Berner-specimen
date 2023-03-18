@@ -1,13 +1,11 @@
 %!TEX program = lualatex
-\documentclass[]{article}
+\documentclass[letterpaper]{article}
 \pagenumbering{gobble}
-\usepackage{geometry}
+% width of DIN A4, height scaled so it has the same ratio as the original: 30.5 cm x 48.2 cm
+% https://sammlungen.ub.uni-frankfurt.de/drucke/content/titleinfo/7499387
+\usepackage[paperwidth=21cm,paperheight=33.2cm,margin=1.5cm]{geometry}
 %\usepackage{showframe}
 \usepackage{changepage}
-\geometry{
-	paper=a4paper,
-	margin=1.9cm
-}
 \usepackage[]{fontspec}
 \setmainfont{EB Garamond}
 \usepackage[document]{ragged2e}
@@ -16,8 +14,9 @@
 \newfontfamily\fraktur{Zentenar Fraktur}
 \usepackage{multicol}
 \usepackage[]{stackengine}
+\usepackage{scalerel}
 % https://tex.stackexchange.com/questions/61624/adjusting-column-width-in-latex-with-the-multicol-package
-\setlength{\columnsep}{5mm}
+\setlength{\columnsep}{4mm}
 \usepackage[]{microtype}
 \newcommand{\threecolumntypefacenames}[3]{\begin{multicols}{3}
 		\tiny
@@ -80,7 +79,6 @@ Deo \& \textls{HVMILIATVM}.\quad  W.\quad H.\quad S.\quad G.\quad \\
 % Greek text transcribed using Google Lens
 Attritus eſt\hfill[\hfill☞\hfill προς  ήλϑεν  αυτώ  ο εκατον Ταρχος,  αξακαλών αυτον κ λέγων, Κύριε ο  παις μᴕ βεβλη\hfill ☜\hfill ]\hfill \textit{rationem eius}
 \vspace{-1.05\baselineskip}
-
 \begin{multicols}{2}
 	\noindent propter iniquitates noſtas,caſtigatio pacis noſtr\ae{} ſuper eum\linebreak
 	Et liuor eitus ſanitas fuit nobis. Omnes nos ficut oues erraui-\linebreak
@@ -104,9 +102,10 @@ Attritus eſt\hfill[\hfill☞\hfill προς  ήλϑεν  αυτώ  ο εκατ�
 \begin{multicols}{2}
 	\tiny
 	\centering
-	Romain Gros Text de Garamond\linebreak
+	Romain Gros Text de Garamond\\
 	\small
-	\qquad Videbit ſemen prolongabit dies, \& voluntas Jehou\ae{} in Manu eius\linebreak
+	\justifying
+	\noindent \qquad Videbit ſemen prolongabit dies, \& voluntas Jehou\ae{} in Manu eius\linebreak
 	proſperabitur. Propter laborem anim\ae{} ſu\ae{} videbit fructum quo ſa\linebreak
 	turabitur, ſcientia ſui iuſtificabit iuſtus ſeruus meus multos, \& iniqui\linebreak
 	tates ipſorium ipſe portabit. Ideo partem dabo ei cum multis \& cum\linebreak
@@ -120,11 +119,160 @@ Attritus eſt\hfill[\hfill☞\hfill προς  ήλϑεν  αυτώ  ο εκατ�
 	\small
 	\justifying
 	\noindent
-	\textit{}
+	\textit{Et eum pr\ae{}uaricatoribus Annumeratus eſt,ipſe quoque precatum Multorum\linebreak
+		■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\linebreak
+		■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\linebreak
+		■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\linebreak
+		■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\\}
 \end{multicols}
+\vspace{-2.2\baselineskip}
 \threecolumntypefacenames{Romain S. Auguſtin de Garamond}{Gr\ae{}c. S. Auguſtin de GranIon}{Curſ. S. Auguſtin de GranIon}
+\vspace{-2.2\baselineskip}
+\begin{multicols}{2}
+	\fontsize{8}{9}\selectfont
+	\justifying
+	\noindent \quad Ad dexteram enim \& ſiniſtram dilataberis, ſemen quoq: tuum Gentes h\ae{}redi\linebreak
+
+	\columnbreak
+	\fontsize{7}{9}\selectfont
+	\justifying
+	\noindent
+	\textit{■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■}
+\end{multicols}
+\fontsize{8}{9}\selectfont
+\vspace{-2.3\baselineskip}
+% Greek text transcribed using Google Lens
+\noindent tate accipiet,\& ciuitates\hfill\hfill {\normalsize [ ☞}\hfill ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\hfill{\normalsize ☜ ]}\hfill \textit{rem Adoleſcentis}
+\vspace{-1.2\baselineskip}
+\begin{multicols}{2}
+	\fontsize{8}{9}\selectfont
+	\justifying
+	\noindent deſolatas inhabitabit. Ne timeas,quia non afficieris pudore, nec erubeſces,Quia\linebreak
+	non afficieris ignominia: pudoris enim doleſcenti\ae{} obliuiſceris. \textsc{nam ma\linebreak
+		ritus} tuus, eſt factor tuus, Jehouah exercitum nomen eius:Et redemptor tuus,\linebreak
+	Sanctus Iſraelis,Deus vniuerſ\ae{} vocatur.
+
+	\columnbreak
+	\fontsize{7}{9}\selectfont
+	\justifying
+	\noindent
+	\textit{Quum rependata fueris,dixit Deus tuus. Momento paruo dereliquitem at in Miſeratio-\linebreak
+		nibus magnis congregabo te. In momento ir\ae{} abſcondi faciem Meam ad momentum \`a te\linebreak
+		In miſericordia ſempiterna Miſertus ſum tui, dixit Redemptor tuus Iehouah.}
+\end{multicols}
 \threecolumntypefacenames{Romain Cicero de Garamond}{Gr\ae{}c. Cicero de GranIon}{Curſ. Cicero de GranIon}
+\vspace{-3\baselineskip}
+\begin{multicols}{2}
+	\fontsize{7}{8}\selectfont
+	\justifying
+	\noindent \quad Nam vt aqu\ae{} Noha hoc michi,cui iuraui quod non tranſient aqu\ae{} Noha vltra ſuper ter\linebreak
+
+	\columnbreak
+	\justifying
+	\noindent
+	\textit{Et ponam ex Margaricis feneſt. tuas,\& portas tuas lapidibus carbunculi, Atque omnem ter\linebreak}
+\end{multicols}
+\fontsize{7}{8}\selectfont
+\vspace{-2.5\baselineskip}
+% Greek text transcribed using Google Lens
+\noindent ram, ſic iuraui quod non iraſcar contra te, \hfill[  ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ ]\hfill \textit{minum tuum lapidibus deſiderabilibus,Vni}
+\vspace{-1.4\baselineskip}
+\begin{multicols}{2}
+	\fontsize{7}{8}\selectfont
+	\justifying
+	\noindent nec in crepabo te Montes enim mouebunt ſeſe,\& colles metabunt miſericordia autem mea\linebreak
+	\`a te non recedet, \& f\oe{}dus pacis me\ae{} non nutabit dixit miſerator tuus \textsc{\addfontfeature{LetterSpace=20} iehovah} Pauper\linebreak
+	cula in turbine verfans Non accepit conſolationem,en ego iacere faciam in Carbunculis la\linebreak
+	pides tuos, \& fundabo te in ſapphiris,
+
+	\columnbreak
+	\justifying
+	\noindent
+	\textit{uerſi quoque filij tui erunt docti \`a Iehouah,\&Multiplicauit pacem filiorum tuorum.In inftitia\linebreak
+		fundaberis,longe aberis ab oppreſſione,quia Non timebis eam.\& \`a contritione quia non appropin\linebreak
+		quabit tibi. En congregando congregabit ſe populus contra te abſque Me.quiſquis congregaue\linebreak
+		rit ſe tecum contra te cadet.}
+\end{multicols}
+\vspace{-1\baselineskip}
+\noindent{}  \normalsize ☞ \fontsize{6}{7}\selectfont\textit{Eſt \& h\ae{}c melioris not\ae{} Litera Currens Ciceroniana,artifice Roberto GranIone Gallo prodita, vulgo Scolaſticalis dicta, Ea in lineas arctior componitur operarum■ magis patiens exiſtit.}
 \threecolumntypefacenames{Romain Garamond de Garamond}{Gr\ae{}c. Garamond de GranIon}{Curſ. Garamond ou Immortel de GranIon}
+\vspace{-3\baselineskip}
+\begin{multicols}{2}
+	\fontsize{6.25}{7}\selectfont
+	\justifying
+	\noindent \quad Ecce ego creaui fabrum ferrarium ſuflantem in igne primas, \& proferentem instrumentum in opus ſuum,\\
+
+	\columnbreak
+	\justifying
+	\noindent
+	\textit{Omnes ſitientes venite ad aquas etiam vos quibus non eſt argentum, venite inquam, venite abſque argento \&\\}
+\end{multicols}
+\fontsize{6.25}{7}\selectfont
+\vspace{-2.7\baselineskip}
+% Greek text transcribed using Google Lens
+\noindent \& ego inquam creaui vaſtatorem as perdendum. Omne inſtru \hfill[\hfill ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\hfill]\hfill \textit{abſque vllo pretio vinum \& lac. Quare qppenditis argentum in}
+\vspace{-1.6\baselineskip}
+\begin{multicols}{2}
+	\fontsize{6.25}{7}\selectfont
+	\justifying
+	\noindent mentum quod formabitur contra te,in proſperabitur,\& \textsc{\addfontfeature{LetterSpace=20} omnem} linguam qu\ae{} ſurget contra tein iudicium\linebreak
+	condemnabis, h\ae{}c eſt h\ae{}reditas ſeruorum Iehouah, \& in ſtitia vorum a me eſt, dixit Iehouah.
+
+	\columnbreak
+	\justifying
+	\noindent
+	% Religio exculpata, p. 413
+	% https://books.google.de/books?id=MPc73tzbtjsC&lpg=PA413&ots=kJ6lOQFDYc&dq=%22laborem%20vestrum%20in%20id%20quod%22&pg=PA413#v=onepage&q=laborem%20vestrum&f=false
+	\textit{non panem \& laborem veſtrum in id quod ſaturare non poteſt, audite audende me,\& comedite bonum,delectabi\linebreak
+		turque in pinguedine anima veſtra. Inclinate aurem veſtram, \& venite ad me, audite, \& viuet anima veſstra,
+	}
+\end{multicols}
+\setlength{\columnsep}{3mm}
+\begin{multicols}{4}
+	\tiny
+	\centering
+	Rom.Galliard de GranIon\\
+	\fontsize{4}{5}\selectfont
+	\justifying
+	\noindent \quad Ecce teſtem populis dedi eum,ducem \& pr\ae{}ceptorem po\linebreak
+	pulis. En gen ( ■■ ■■■■■■ ■■■■■■■ ■■■■ ) tem quam non\linebreak
+	noſti vocabis as te \& gentes qu\ae{} non nouerunt te. current pro\linebreak
+	pter Iehouam Deum tuum, \& Sanctum Iſraelis. Quia glorifica
+
+	\columnbreak
+
+	\centering
+	Rom. Non parel.\\
+	\fontsize{3}{3.75}\selectfont
+	\justifying
+	\noindent bit te Qu\ae{}rite Dominum dum inuenitur,inuocate eum dum eſt propiqnus,\linebreak
+	De relinquat impius viam ſuam, \& vir iniquus cogitationes ſuas, reuertatur\linebreak
+	que ad Iehouam, miſerabitur eius,\& ad Deum noſtrum, quoniam multus eſt\linebreak
+	ad remitendum,
+
+	\columnbreak
+
+	\centering
+	Curſ. Petit Text de G.\\
+	\fontsize{4}{5}\selectfont
+	\justifying
+	\noindent \textit{Non enim cogitationes me\ae{}. cogitationes veſtr\ae{}. nec vi\ae{} veſtr\ae{} viæ \linebreak
+		me\ae{}. dixit Iehoua. (■■■) Nam quanto altiors ſunt coeli quam\linebreak
+		terra.tanto vltiores ſunt vit\ae{}me\ae{}. quam vi\ae{} veſtr\ae{}. \& cogitationes\linebreak
+		me\ae{} Quam {\normalfont cogitationes} veſtra.}
+
+	\columnbreak
+
+	\centering
+	Curſ.Non parel.\\
+	\fontsize{3}{3.75}\selectfont
+	\justifying
+	\noindent\textit{Certe quemadmodum deſcendit imber \& nix de celo,\& illuc non reuertitur, ſed\linebreak
+		in ebriat terram \& gignere facit eam,ae germinare eam facit,\& dabit ſemen ſe\linebreak
+		renti \& panem comedenti, sic erit verbum meum quod egreditur de ore meo non\linebreak
+		reuertetur ad me vacuum,}
+\end{multicols}
+\vspace{1cm}
 \begin{adjustwidth}{2.3cm}{2.3cm}
 	\fraktur
 	\tiny
@@ -133,7 +281,7 @@ Attritus eſt\hfill[\hfill☞\hfill προς  ήλϑεν  αυτώ  ο εκατ�
 	truckers in Franckfurt ſelbſten/vnd dann ſeine witib. Nachmals aber durch deren ſelben Erben/ als nemlich Jacob Sabon vnd Conrad Berner mit allem fleiß zuſammen gebracht/ vnd\linebreak
 	zu beförderung aller deren ſo ſich der federen gebrauchen/fürnemlich aber zu beſonderem vortheil den \normalfont Autoribus \fraktur der \normalfont Exemplarien publicirt\fraktur / darinnen ſie ſich zuerſehen/ mit was Schri\linebreak
 	fften ihre weck mögen verfertiget werden/so wol auch allen vnd jeden Schrifftgieſſern/ vnd Buchdruckern nützlich/nachzuſehen was in eines jeden Truckeren vnnd bereitſchafft dienſtlich\linebreak
-	ſein möge. Nach dem aber die Teuſchten und Hebraiſchen ſchrifften nicht ſonderlich hoch geachtet/ als ſindt die selbige wie dann auch etliche andere Latinische nicht hieher heſetzt/ ob wol\linebreak
+	ſein möge. Nach dem aber die Teuſchen und Hebraiſchen ſchrifften nicht ſonderlich hoch geachtet/ als ſindt die selbige wie dann auch etliche andere Latinische nicht hieher heſetzt/ ob wol\linebreak
 	% https://www.etymonline.com/word/copious
 	auch die beſten vnder den ſelbigen \normalfont In Copia \fraktur verhanden. Und man findet allerhand Abschläge Teutsch Latinisch Griechisch und Hebraisch zu vberlaſſen vnd zuuerkauffen/ zugieſſen aber\linebreak
 	ſind ſie ſamptlich vorhanden. Verfertiget durch Conrad Berner Anno 1592
