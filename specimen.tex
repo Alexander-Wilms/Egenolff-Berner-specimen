@@ -22,6 +22,11 @@
 % https://tex.stackexchange.com/questions/61624/adjusting-column-width-in-latex-with-the-multicol-package
 \setlength{\columnsep}{4mm}
 \usepackage[]{microtype}
+% https://tex.stackexchange.com/a/380814/38905
+\makeatletter
+\def\MT@warn@unknown{}
+\def\MT@info@missing{}
+\makeatother
 \newcommand{\threecolumntypefacenames}[3]{\begin{multicols}{3}
 		\tiny
 		\hfill \qquad \qquad \qquad \qquad #1\hspace*{\fill}\\
@@ -75,18 +80,21 @@ Deo \& \textls{HVMILIATVM}.\quad  W.\quad H.\quad S.\quad G.\quad \\
 	\normalsize
 	\justifying
 	{\addfontfeature{RawFeature=+hlig}Ipſe autem vulneratus \& propter preuaricationes noſtras\linebreak}
+
 	\columnbreak
-	\textit{Nec aperuit os ſuum.A carcere \& iudicio sublatus eſt: \& Gene}
+
+	\noindent
+	{\addfontfeature{RawFeature=+swsh}\textit{Nec aperuit os ſuum.A carcere\&iudicio sublatus eſt:\& Gene\linebreak}}
 \end{multicols}
-\vspace{-1.55\baselineskip}
+\vspace{-3.15\baselineskip}
 \normalsize
 \justifying
 \noindent
 % Greek text transcribed using Google Lens
 Attritus eſt\hfill[\hfill☞\hfill \greektext \grecs{}  wza. ■■. \normalfont%
 	% προς  ήλϑεν  αυτώ  ο εκατον Ταρχος,  αξακαλών αυτον κ λέγων, Κύριε ο  παις μᴕ βεβλη
-	\hfill ☜\hfill ]\hfill \textit{rationem eius}
-\vspace{-1.05\baselineskip}
+	\hfill ☜\hfill ]\hfill \textit{rationem eius\linebreak}
+\vspace{-2.1\baselineskip}
 \begin{multicols}{2}
 	\noindent {\addfontfeature{RawFeature=+hlig}propter iniquitates noſtas,caſtigatio pacis noſtr\ae{} ſuper eum\linebreak
 		Et liuor eitus ſanitas fuit nobis. Omnes nos ficut oues erraui-\linebreak
@@ -161,8 +169,8 @@ Attritus eſt\hfill[\hfill☞\hfill \greektext \grecs{}  wza. ■■. \normalfon
 \fontsize{8}{9}\selectfont
 \vspace{-2.3\baselineskip}
 % Mostly the same as above
-\noindent tate accipiet,\& ciuitates\hfill\hfill {\normalsize [ ☞}\hfill \grecs DIa. \greektext ■ ■■ ■■■■■ \grecs wza ■■■oj ■■■ DIa \normalfont \hfill{\normalsize ☜ ]}\hfill \textit{rem Adoleſcentis}
-\vspace{-1.2\baselineskip}
+\noindent tate accipiet,\& ciuitates\hfill\hfill {\normalsize [ ☞}\hfill \grecs DIa. \greektext ■ ■■ ■■■■■ \grecs wza ■■■oj ■■■ DIa \normalfont \hfill{\normalsize ☜ ]}\hfill \textit{rem Adoleſcentis\linebreak}
+\vspace{-2.3\baselineskip}
 \begin{multicols}{2}
 	\fontsize{8}{9}\selectfont
 	\justifying
@@ -197,7 +205,7 @@ Attritus eſt\hfill[\hfill☞\hfill \greektext \grecs{}  wza. ■■. \normalfon
 \noindent ram, ſic iuraui quod non iraſcar contra te, [ %
 		% https://morphologia_gr_en.en-academic.com/278592/%CE%B1%CF%80%CE%BF%CE%B4%CF%81%CE%AC
 		{\grecs apodra wai diwkai kan x autw quw yan zandw autw ciw xkau " wro kadai boqai opi wro zwgd kspdiw jusji bamwtiw ".} ] \textit{minum tuum lapidibus deſiderabilibus,Vni\linebreak}
-\vspace{-2.4\baselineskip}
+\vspace{-2.55\baselineskip}
 \begin{multicols}{2}
 	\fontsize{7}{8}\selectfont
 	\justifying
