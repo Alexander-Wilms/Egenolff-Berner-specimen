@@ -7,7 +7,18 @@
 %\usepackage{showframe}
 \usepackage{changepage}
 \usepackage{fontspec}
-\setmainfont{EB Garamond}
+% https://tex.stackexchange.com/a/679986/38905
+\setmainfont{EBGaramond}[
+UprightFeatures={
+	SizeFeatures={
+		{Size={12-},Font=*12-Regular},
+		{Size={-12},Font=*08-Regular}
+}},
+ItalicFeatures={
+	SizeFeatures={
+		{Size={12-},Font=*12-Italic},
+		{Size={-12},Font=*08-Italic}
+}}]
 \usepackage[document]{ragged2e}
 % https://www.1001fonts.com/zentenar-fraktur-font.html
 % https://tex.stackexchange.com/a/37251/38905
