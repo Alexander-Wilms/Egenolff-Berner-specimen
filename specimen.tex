@@ -3,7 +3,7 @@
 \pagenumbering{gobble}
 % width of DIN A4, height scaled so it has the same ratio as the original: 30.5 cm x 48.2 cm
 % https://sammlungen.ub.uni-frankfurt.de/drucke/content/titleinfo/7499387
-\usepackage[paperwidth=21cm,paperheight=33.2cm,margin=1.3cm]{geometry}
+\usepackage[paperwidth=21cm,paperheight=33.2cm,margin=1cm]{geometry}
 %\usepackage{showframe}
 \usepackage{changepage}
 \usepackage{fontspec}
@@ -26,7 +26,8 @@ ItalicFeatures={
 % https://github.com/georgd/EB-Garamond/issues/151#issuecomment-1474443214
 % https://en.wikipedia.org/wiki/Grecs_du_roi#Digitizations
 % https://web.archive.org/web/20051017031544/http://www.flf.vu.lt:80/strockis/grecswg.zip
-\newfontfamily\grecs{Grecs du roi WG}
+%\newfontfamily\grecs{Grecs du roi WG}
+\newfontfamily\grecs{Theano Old Style}
 \usepackage{multicol}
 \usepackage{stackengine}
 \usepackage{scalerel}
@@ -46,7 +47,15 @@ ItalicFeatures={
 		\columnbreak
 		\hfill #3\qquad \qquad \qquad \qquad \hspace*{\fill}
 \end{multicols}}
-\newcommand{\greektext}{\grecs wro jhlqen autw o ekaton zarcoj, wzakalwn auton k legwn,Kurie o paij mou beblh "\normalfont}
+% Grecs du roi WG
+% source file harder to read since it doesn't support greek Unicode
+% looks more like handwriting
+% font is shareware, no longer maintained and only available on Archive.org
+% \newcommand{\greektext}{\grecs wro jhlqen autw o ekaton zarcoj, wzakalwn auton k legwn,Kurie o paij mou beblh "\normalfont}
+% supports most ligatures
+% available on CTAN
+% https://en.wiktionary.org/wiki/%CE%B1%E1%BD%90%CF%84%CF%8E
+\newcommand{\greektext}{\grecs \addfontfeature{LetterSpace=-5.}\selectfont\textls{ϖςηλϑεν αὐτώ ο ἐκατον ζαϱχος, παρακαλων αυτον ϗ λἐγων,Κυε ο παις μβὲβλη } \normalfont}
 \begin{document}
 \addfontfeature{RawFeature=+hlig}
 \addfontfeature{RawFeature=+swsh}
@@ -101,8 +110,11 @@ Deo \& \textls{HVMILIATVM}.\quad  W.\quad H.\quad S.\quad G.\quad \\
 \normalsize
 \justifying
 \noindent
-% Greek text transcribed using Google Lens
-Attritus eſt\hfill[\hfill{\large \scalebox{0.8}{☞}}\hfill \greektext \grecs{}  wza. ■■. \normalfont%
+% https://tex.stackexchange.com/a/131086/38905
+% Attritus eſt\hfill[\hfill{\large \scalebox{0.8}{☞}}\hfill \greektext \grecs{}  wza. ■■. \normalfont%
+% https://en.wikipedia.org/wiki/Greek_ligatures
+% What looks a bit like "ωζα" is the ligature for παρα, cf. the Wikipedia article
+Attritus eſt\hfill[\hfill{\large \scalebox{0.8}{☞}}\hfill \greektext  \grecs παρα. ■■. \normalfont%
 	% προς  ήλϑεν  αυτώ  ο εκατον Ταρχος,  αξακαλών αυτον κ λέγων, Κύριε ο  παις μᴕ βεβλη
 	\hfill{\large \scalebox{0.8}{☜}}\hfill ]\hfill \textit{rationem eius\linebreak}
 \vspace{-2.1\baselineskip}
@@ -175,12 +187,15 @@ Attritus eſt\hfill[\hfill{\large \scalebox{0.8}{☞}}\hfill \greektext \grecs{}
 	%\textit{■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■}
 	% Biblia sacra variarum translationum: tribus tomis distincta, Volume 2, p. 565
 	% https://books.google.de/books?id=je_TuKNpuDEC&lpg=PA565&ots=xSXGcUmhcq&dq=%22dixit%20deus%20tuus%22%20%22congregabit%20se%20populus%22&pg=PA565#v=onepage&q=%22dixit%20deus%20tuus%22%20%22congregabit%20se%20populus%22&f=false
-	\textit{Quia ficut mulierem derelictam \& dolore affectam spiritu, vocavis te Iehouah, \& uxo}
+	\textit{Quia ficut mulierem derelictam \& dolore affectam spiritu, vocavis te Iehouah, \& uxo\linebreak}
 \end{multicols}
 \fontsize{8}{9}\selectfont
 \vspace{-2.3\baselineskip}
 % Mostly the same as above
-\noindent tate accipiet,\& ciuitates\hfill\hfill {\normalsize [ {\large \scalebox{0.8}{☞}}}\hfill \grecs DIa. \greektext ■ ■■ ■■■■■ \grecs wza ■■■oj ■■■ DIa \normalfont \hfill{\normalsize {\large \scalebox{0.8}{☜}} ]}\hfill \textit{rem Adoleſcentis\linebreak}
+% \noindent tate accipiet,\& ciuitates\hfill\hfill {\normalsize [ {\large \scalebox{0.8}{☞}}}\hfill \grecs DIa. \greektext ■ ■■ ■■■■■ \grecs wza ■■■oj ■■■ DIa \normalfont \hfill{\normalsize {\large \scalebox{0.8}{☜}} ]}\hfill \textit{rem Adoleſcentis\linebreak}
+% Searching for παρα υμκος resulted in this:
+% https://el.wikipedia.org/wiki/%CE%8E%CE%BC%CE%BD%CE%BF%CF%82_%CE%B5%CE%B9%CF%82_%CF%84%CE%B7%CE%BD_%CE%95%CE%BB%CE%B5%CF%85%CE%B8%CE%B5%CF%81%CE%AF%CE%B1%CE%BD
+\noindent tate accipiet,\& ciuitates\enspace\hfill\hfill {\normalsize [ {\large \scalebox{0.8}{☞}}}\hfill \grecs Δια. \greektext \grecs  τη οικια παρα υμκος οπι Δια \normalfont \hfill{\normalsize {\large \scalebox{0.8}{☜}} ]}\hfill \textit{\enspace rem Adoleſcenti\ae{},\linebreak}
 \vspace{-2.3\baselineskip}
 \begin{multicols}{2}
 	\fontsize{8}{9}\selectfont
@@ -215,7 +230,8 @@ Attritus eſt\hfill[\hfill{\large \scalebox{0.8}{☞}}\hfill \greektext \grecs{}
 \vspace{-2.5\baselineskip}
 \noindent ram, ſic iuraui quod non iraſcar contra te, [ %
 		% https://morphologia_gr_en.en-academic.com/278592/%CE%B1%CF%80%CE%BF%CE%B4%CF%81%CE%AC
-		{\grecs apodra wai diwkai kan x autw quw yan zandw autw ciw xkau \kern-1pt"wro kadai boqai opi wro zwgd kspdiw jusji bamwtiw ei\kern-1pt\raisebox{.1ex}{"}.} ] \textit{minum tuum lapidibus deſiderabilibus.Vni\linebreak}
+		% {\grecs apodra wai diwkai kan x autw quw yan zandw autw ciw xkau \kern-1pt"wro kadai boqai opi wro zwgd kspdiw jusji bamwtiw ei\kern-1pt\raisebox{.1ex}{"}.} ] \textit{minum tuum lapidibus deſiderabilibus.Vni\linebreak}
+		{\grecs ἀπδ αιδυωκαι καν ξϑην ψαν ζανδω αὐτώ χην δξκαυ  ωκαδαι βοϑαιὀπι ωζωγδ κδπδην δςι βαμωτην \scalebox{0.5}{}\kern-2pt\scalebox{1.2}{}.} ] \textit{minum tuum lapidibus deſiderabilibus.Vni\linebreak}
 \vspace{-2.55\baselineskip}
 \begin{multicols}{2}
 	\fontsize{7}{8}\selectfont
@@ -241,19 +257,20 @@ Attritus eſt\hfill[\hfill{\large \scalebox{0.8}{☞}}\hfill \greektext \grecs{}
 \begin{multicols}{2}
 	\fontsize{6.25}{7}\selectfont
 	\justifying
-	\noindent \quad Ecce ego creaui fabrum ferrarium ſuflantem in igne primas, \& proferentem instrumentum in opus ſuum,\\
+	\noindent \quad Ecce ego creaui fabrum ferrarium ſuflantem in igne primas, \& proferentem instrumentum in opus ſuum,\linebreak
 
 	\columnbreak
 	\justifying
 	\noindent
-	\textit{\addfontfeature{RawFeature=+swsh}Omnes ſitientes venite ad aquas etiam vos quibus non eſt argentum, venite inquam, venite abſque argento {\addfontfeature{OpticalSize=12}\&}\\}
+	\textit{\addfontfeature{RawFeature=+swsh}Omnes ſitientes venite ad aquas etiam vos quibus non eſt argentum, venite inquam, venite abſque argento \&\linebreak}
 \end{multicols}
 \fontsize{6.25}{7}\selectfont
 \vspace{-2.7\baselineskip}
 \noindent \& ego inquam creaui vaſtatorem as perdendum. Omne inſtru \hfill[\hfill %
 	% https://en.wiktionary.org/wiki/%CE%BB%CE%B5%CE%BB%CF%85%CE%BC%CE%AD%CE%BD%CE%B1
 	% https://en.wiktionary.org/wiki/%CF%8E%CF%81%CE%B1#Greek
-	{\grecs DIa ejai lelumena n tw ouranw kwria " pw xmadpo a badawra motw kuwrgwog bonzaukem}\hfill]\hfill \textit{abſque vllo pretio vinum \& lac. Quare qppenditis argentum in}
+	% {\grecs DIa ejai lelumena n tw ouranw kwria " pw xmadpo a badawra motw kuwrgwog bonzaukem}\hfill]\hfill \textit{abſque vllo pretio vinum \& lac. Quare qppenditis argentum in}
+	{\grecs \addfontfeature{LetterSpace=-7.5}\selectfont\textls{Δια έςαι λελυνα  τώ ουνω. ωκα  πυω ξμα ο α βαδαω μοτην κυω ογαω βονυκεμ}}\hfill]\hfill \textit{abſque vllo pretio vinum \& lac. Quare qppenditis argentum in}
 \vspace{-1.6\baselineskip}
 \begin{multicols}{2}
 	\fontsize{6.25}{7}\selectfont
@@ -281,7 +298,8 @@ Attritus eſt\hfill[\hfill{\large \scalebox{0.8}{☞}}\hfill \greektext \grecs{}
 	\justifying
 	% Isaiah 55:5
 	\noindent \quad {\addfontfeature{RawFeature=+hlig}Ecce teſtem populis dedi eum , duce\char"E105{} \& pr\ae{}ceptorem po\linebreak
-	pulis. En gen ( {\grecs mgu kagqai ma kaiaow mam bama} ) tem quam non\linebreak
+	% pulis. En gen ( {\grecs mgu kagqai ma kaiaow mam bama} ) tem quam non\linebreak
+	pulis. En gen ( {\grecs μαμ ϑαιμα αι μαμ βαμα} ) tem quam non\linebreak
 	noſti vocabis as te \& gentes qu\ae{} non nouerunt te, current pro\linebreak
 	pter Iehouam Deum tuum, \& Sanctum Iſraelis. quia glorifica\linebreak}
 
@@ -312,7 +330,8 @@ Attritus eſt\hfill[\hfill{\large \scalebox{0.8}{☞}}\hfill \greektext \grecs{}
 	\fontsize{4}{4.5}\selectfont
 	\justifying
 	\noindent \textit{\addfontfeature{RawFeature=+swsh}Non enim cogitationes me\ae{}. cogitationes veſtr\ae{}. nec vi\ae{} veſtr\ae{} viæ \linebreak
-		me\ae{}. dixit Iehoua. ( {\grecs asw qai} ) Nam quanto altiors ſunt coeli quam\linebreak
+		% me\ae{}. dixit Iehoua. ( {\grecs asw qai} ) Nam quanto altiors ſunt coeli quam\linebreak	
+		me\ae{}. dixit Iehoua. ( {\grecs \addfontfeature{LetterSpace=-10.}\selectfont\textls{αι ϑαι}} ) Nam quanto altiors ſunt coeli quam\linebreak
 		terra.tanto vltiores ſunt vit\ae{}me\ae{}. quam vi\ae{} veſtr\ae{}. \& cogitationes\linebreak
 		me\ae{} Quam {\normalfont cogitationes} veſtra.} \quad ☙ ❧
 
