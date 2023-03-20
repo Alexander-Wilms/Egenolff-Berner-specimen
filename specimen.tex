@@ -3,7 +3,7 @@
 \pagenumbering{gobble}
 % width of DIN A4, height scaled so it has the same ratio as the original: 30.5 cm x 48.2 cm
 % https://sammlungen.ub.uni-frankfurt.de/drucke/content/titleinfo/7499387
-\usepackage[paperwidth=21cm,paperheight=33.2cm,margin=1cm]{geometry}
+\usepackage[paperwidth=21cm,paperheight=33.2cm,margin=1.1cm]{geometry}
 %\usepackage{showframe}
 \usepackage{changepage}
 \usepackage{fontspec}
@@ -55,7 +55,7 @@ ItalicFeatures={
 % supports most ligatures
 % available on CTAN
 % https://en.wiktionary.org/wiki/%CE%B1%E1%BD%90%CF%84%CF%8E
-\newcommand{\greektext}{\grecs \addfontfeature{LetterSpace=-5.}\selectfont\textls{ϖςηλϑεν αὐτώ ο ἐκατον ζαϱχος, παρακαλων αυτον ϗ λἐγων,Κυε ο παις μβὲβλη } \normalfont}
+\newcommand{\greektext}{ϖςηλϑεν αὐτώ ο ἐκατον ζαϱχος, παρακαλων αυτον ϗ λἐγων,Κυε ο παις μβὲβλη }
 \begin{document}
 \addfontfeature{RawFeature=+hlig}
 \addfontfeature{RawFeature=+swsh}
@@ -69,28 +69,32 @@ ItalicFeatures={
 		\fontsize{9.5}{11.5}\selectfont POSTIVM, TAM IPSIS LIBRORVM AVTORIBVS\kern-2pt,\\
 		\fontsize{7}{9}\selectfont QVAM TYPOGRAPHIS APPRIME VTILE\\
 		\fontsize{5}{4}\selectfont AT\quad ACCOMMODATVM.\\}
+
 \justifying
 \huge
 % Isaiah 53
 % Unicode character identified via KFont
 % https://tex.stackexchange.com/a/3116/38905
-\noindent \P \quad Quis credidit Auditui noſtro: \& brachium Iehou\ae{} cui Re-\\
-uelatum eſt,Et aſcendit ſicut virgultum \textls{CORAM} eo, \& velut\\
-radix de terra deſerti: Non erat forma ei, neque decor. \char"E001{} \AE{}. \OE .
+\noindent \P \quad \enspace Quis credidit Auditui noſtro: \& brachium Iehou\ae{} cui Re-\linebreak
+uelatum eſt,Et aſcendit ſicut virgultum \textls{CORAM} eo, \& velut\linebreak
+radix de terra deſerti: Non erat forma ei, neque decor. \char"E001{} \AE{}. \OE .\linebreak
 
+\vspace{-0.7\baselineskip}
 \small
 \centering
 Petit Canon de Garamond.\\
 \vspace{-0.5\baselineskip}
 \Large
 \justifying
-Aſpeximus autem eu\stackon{m}{\textit{m}},\& non erat aſpectus, \& Non deſiderauimus eum videre. Deſpe \\
-ctus fuit \& Reiectus inter viros vir dolorum, \& expertus Infirmitatem, \& veluti abſsonſio \\
-faciel Ab eo,deſpectus inquam, \& non putauimus eum. Ver\`e languores noſtros ipſe tulit, \\
-\& dolores noſtros portauit, nos Autem reputauimus Eum plagis affectum, Percuſſum \`a\\
+Aſpeximus autem eu\stackon{m}{\textit{m}},\& non erat aſpectus, \& Non deſiderauimus eum videre. Deſpe \linebreak
+ctus fuit \& Reiectus inter viros vir dolorum, \& expertus Infirmitatem, \& veluti abſsonſio \linebreak
+faciel Ab eo,deſpectus inquam, \& non putauimus eum. Ver\`e languores noſtros ipſe tulit, \linebreak
+\& dolores noſtros portauit, nos Autem reputauimus Eum plagis affectum, Percuſſum \`a\linebreak
+
 \centering
 % these letters might not mean anything and just showcase the typeface, similar to the \AE and \OE charcters in the previous paragraph
-Deo \& \textls{HVMILIATVM}.\quad  W.\quad H.\quad S.\quad G.\quad \\
+\vspace{-1\baselineskip}
+Deo \& \textls{HVMILIATVM}.\qquad {\quad}{\large  \char"2619} \quad W.\quad H.\quad S.\quad G.\quad {\large \char"2767}\\
 \vspace{-\baselineskip}
 \threecolumntypefacenames{Romain Parangon de Garamond}{Gr\ae{}c. Parangon deRobert GranIon\quad \quad \quad \quad \quad \quad \quad \quad }{Curſiff Parangon de GranIon}
 \vspace*{-\baselineskip}
@@ -114,23 +118,25 @@ Deo \& \textls{HVMILIATVM}.\quad  W.\quad H.\quad S.\quad G.\quad \\
 % Attritus eſt\hfill[\hfill{\large \scalebox{0.8}{☞}}\hfill \greektext \grecs{}  wza. ■■. \normalfont%
 % https://en.wikipedia.org/wiki/Greek_ligatures
 % What looks a bit like "ωζα" is the ligature for παρα, cf. the Wikipedia article
-Attritus eſt\hfill[\hfill{\large \scalebox{0.8}{☞}}\hfill \greektext  \grecs παρα. ■■. \normalfont%
+Attritus eſt\hfill[\hfill{\large \scalebox{0.8}{☞}}\hfill {}\grecs\addfontfeature{LetterSpace=-1.}\selectfont\textls{\greektext  \grecs παρα. ■■.}} %
 	% προς  ήλϑεν  αυτώ  ο εκατον Ταρχος,  αξακαλών αυτον κ λέγων, Κύριε ο  παις μᴕ βεβλη
 	\hfill{\large \scalebox{0.8}{☜}}\hfill ]\hfill \textit{rationem eius\linebreak}
 \vspace{-2.1\baselineskip}
 \begin{multicols}{2}
+	\justifying
 	\noindent {\addfontfeature{RawFeature=+hlig}propter iniquitates noſtas,caſtigatio pacis noſtr\ae{} ſuper eum\linebreak
-		Et liuor eitus ſanitas fuit nobis. Omnes nos ficut oues erraui-\linebreak
-		mus, vnuſquiſque ad viam ſuam Declinauit,\& Iehouah con\linebreak
-		iecit in illum iniquitates omnium noſtrum. Oppreſſus fuit,\linebreak
-		\& ipſe afflictus,\& non Aperuit os ſuum. Sicut agnus ad \textsc{ma}-\linebreak
-		\textsc{ctationem} ductus eſt, et velut ouis coram tondente ſe obm.\linebreak}
+	Et liuor eitus ſanitas fuit nobis. Omnes nos ficut oues erraui-\linebreak
+	mus, vnuſquiſque ad viam ſua\char"E105{} Declinauit,\& Iehouah con\linebreak
+	iecit in illum iniquitates omnium noſtrum. Oppreſſus fuit,\linebreak
+	\& ipſe afflictus,\& non Aperuit os ſuu\char"E105{}. Sicut agnus ad \textsc{ma}-\linebreak
+	\textsc{ctationem} ductus eſt, et velut ouis coram tondente ſe obm.\linebreak}
 
 	\columnbreak
 
 	\justifying
 	\noindent
-	\textit{Quis enarrabit,\addfontfeature{RawFeature=+swsh}Quia abciſſus eſt \`e terra viuentium,propter pr\ae{} \linebreak
+	% EBGaramond supports Qui and is ligatures, but no Quis
+	\textit{{\addfontfeature{RawFeature=-swsh}Quis} enarrabit,{\addfontfeature{RawFeature=+swsh}Q}uia abciſſus eſt \`e terra viuentium,propter pr\ae{} \linebreak
 	uaricationem populi {\addfontfeature{RawFeature=+swsh}M}ei plaga fuit ei.Et dedit cum impijs ſepul\linebreak
 	turam eius, \& cum diuite in Morte ſua: Quamuis iniquitatem\linebreak
 	non fecerit,{\normalfont \textit N}ec dolus fuerit in ore eius. Jehouah Autem voluit\linebreak
@@ -195,7 +201,8 @@ Attritus eſt\hfill[\hfill{\large \scalebox{0.8}{☞}}\hfill \greektext  \grecs 
 % \noindent tate accipiet,\& ciuitates\hfill\hfill {\normalsize [ {\large \scalebox{0.8}{☞}}}\hfill \grecs DIa. \greektext ■ ■■ ■■■■■ \grecs wza ■■■oj ■■■ DIa \normalfont \hfill{\normalsize {\large \scalebox{0.8}{☜}} ]}\hfill \textit{rem Adoleſcentis\linebreak}
 % Searching for παρα υμκος resulted in this:
 % https://el.wikipedia.org/wiki/%CE%8E%CE%BC%CE%BD%CE%BF%CF%82_%CE%B5%CE%B9%CF%82_%CF%84%CE%B7%CE%BD_%CE%95%CE%BB%CE%B5%CF%85%CE%B8%CE%B5%CF%81%CE%AF%CE%B1%CE%BD
-\noindent tate accipiet,\& ciuitates\enspace\hfill\hfill {\normalsize [ {\large \scalebox{0.8}{☞}}}\hfill \grecs Δια. \greektext \grecs  τη οικια παρα υμκος οπι Δια \normalfont \hfill{\normalsize {\large \scalebox{0.8}{☜}} ]}\hfill \textit{\enspace rem Adoleſcenti\ae{},\linebreak}
+
+\noindent tate accipiet,\& ciuitates\enspace\hfill\hfill {\normalsize [ {\large \scalebox{0.8}{☞}}}\hfill \grecs \addfontfeature{LetterSpace=-5.}\selectfont\textls{Δια. \greektext   τη οικια παρα υμκος οπι Δια} \normalfont \hfill{\normalsize {\large \scalebox{0.8}{☜}} ]}\hfill \textit{\enspace rem Adoleſcenti\ae{},\linebreak}
 \vspace{-2.3\baselineskip}
 \begin{multicols}{2}
 	\fontsize{8}{9}\selectfont
@@ -231,7 +238,7 @@ Attritus eſt\hfill[\hfill{\large \scalebox{0.8}{☞}}\hfill \greektext  \grecs 
 \noindent ram, ſic iuraui quod non iraſcar contra te, [ %
 		% https://morphologia_gr_en.en-academic.com/278592/%CE%B1%CF%80%CE%BF%CE%B4%CF%81%CE%AC
 		% {\grecs apodra wai diwkai kan x autw quw yan zandw autw ciw xkau \kern-1pt"wro kadai boqai opi wro zwgd kspdiw jusji bamwtiw ei\kern-1pt\raisebox{.1ex}{"}.} ] \textit{minum tuum lapidibus deſiderabilibus.Vni\linebreak}
-		{\grecs ἀπδ αιδυωκαι καν ξϑην ψαν ζανδω αὐτώ χην δξκαυ  ωκαδαι βοϑαιὀπι ωζωγδ κδπδην δςι βαμωτην \scalebox{0.5}{}\kern-2pt\scalebox{1.2}{}.} ] \textit{minum tuum lapidibus deſiderabilibus.Vni\linebreak}
+		{\grecs \addfontfeature{LetterSpace=-5.}\selectfont\textls{ἀπδ αιδυωκαι καν ξϑην ψαν ζανδω αὐτώ χην δξκαυ  ωκαδαι βοϑαιὀπι ωζωγδ κδπδην δςι βαμωτην} \scalebox{0.5}{}\kern-2pt\scalebox{1.2}{}.} ] \textit{minum tuum lapidibus deſiderabilibus.Vni\linebreak}
 \vspace{-2.55\baselineskip}
 \begin{multicols}{2}
 	\fontsize{7}{8}\selectfont
@@ -250,6 +257,7 @@ Attritus eſt\hfill[\hfill{\large \scalebox{0.8}{☞}}\hfill \greektext  \grecs 
 	rit ſe tecum contra te cadet.}
 \end{multicols}
 \vspace{-1\baselineskip}
+\raggedright
 \noindent{}  \normalsize {\large \scalebox{0.7}{☞}} \fontsize{6}{7}\selectfont\textit{\addfontfeature{RawFeature=+hlig}Eſt \& h\ae{}c melioris not\ae{} Litera Currens Ciceroniana,artifice Roberto GranIone Gallo prodita, vulgo Scolaſticalis dicta, Ea in lineas arctior componitur operarum■ magis patiens exiſtit.}
 \vspace{-1.5\baselineskip}
 \threecolumntypefacenames{Romain Garamond de Garamond}{Gr\ae{}c. Garamond de GranIon}{Curſ. Garamond ou Immortel de GranIon}
@@ -351,18 +359,21 @@ Attritus eſt\hfill[\hfill{\large \scalebox{0.8}{☞}}\hfill \greektext  \grecs 
 		reuertetur ad me vacuum,}
 \end{multicols}
 \vspace{0.75cm}
-\begin{adjustwidth}{2.3cm}{2.3cm}
-	\fraktur
-	\tiny
-	\noindent
-	Prob vnd Abtruck Der fürnemſten vnd allerſchönſten Schrifften ſo jemals an tag kommen/ mit groſſer mühe und koſten / anfangs durch Weiland Chriſtian Egenolffs erſten Buch\linebreak
-	% https://de.wiktionary.org/wiki/Wittib
-	truckers in Franckfurt ſelbſten/vnd dann ſeine witib. Nachmals aber durch deren ſelben Erben/ als nemlich Jacob Sabon vnd Conrad Berner mit allem fleiß zuſammen gebracht/ vnd\linebreak
-	zu beförderung aller deren ſo ſich der federen gebrauchen/fürnemlich aber zu beſonderem vortheil den \normalfont Autoribus \fraktur der \normalfont Exemplarien publicirt\fraktur / darinnen ſie ſich zuerſehen/ mit was Schri\linebreak
-	fften ihre werck mögen verfertiget werden/ſo wol auch allen vnd jeden Schrifftgieſſern/ vnd Buchdruckern nützlich/nachzuſehen was in eines jeden Truckeren vnnd bereitſchafft dienſtlich\linebreak
-	ſein möge. Nach dem aber die Teutſchen und Hebraiſchen ſchrifften nicht ſonderlich hoch geachtet/ als ſindt die selbige wie dann auch etliche andere Latinische nicht hieher heſetzt/ ob wol\linebreak
-	% https://www.etymonline.com/word/copious
-	auch die beſten vnder den ſelbigen \normalfont In Copia \fraktur verhanden. Und man findet allerhand Abschläge Teutſch Latiniſch Griechiſch und Hebraiſch zu vberlaſſen vnd zuuerkauffen/ zugieſſen aber\linebreak
-	ſind ſie ſamptlich verhanden. Verfertiget durch Conrad Berner Anno 1592 \normalfont \quad ☙ \enspace ❧
-\end{adjustwidth}
+\centerline{
+	\begin{minipage}{0.7\textwidth}
+		\justifying
+		\fraktur
+		\tiny
+		\noindent
+		Prob vnd Abtruck Der fürnemſten vnd allerſchönſten Schrifften ſo jemals an tag kommen/ mit groſſer mühe und koſten / anfangs durch Weiland Chriſtian Egenolffs erſten Buch\linebreak
+		% https://de.wiktionary.org/wiki/Wittib
+		truckers in Franckfurt ſelbſten/vnd dann ſeine witib. Nachmals aber durch deren ſelben Erben/ als nemlich Jacob Sabon vnd Conrad Berner mit allem fleiß zuſammen gebracht/ vnd\linebreak
+		zu beförderung aller deren ſo ſich der federen gebrauchen/fürnemlich aber zu beſonderem vortheil den \normalfont Autoribus \fraktur der \normalfont Exemplarien publicirt\fraktur / darinnen ſie ſich zuerſehen/ mit was Schri\linebreak
+		fften ihre werck mögen verfertiget werden/ſo wol auch allen vnd jeden Schrifftgieſſern/ vnd Buchdruckern nützlich/nachzuſehen was in eines jeden Truckeren vnnd bereitſchafft dienſtlich\linebreak
+		ſein möge. Nach dem aber die Teutſchen und Hebraiſchen ſchrifften nicht ſonderlich hoch geachtet/ als ſindt die selbige wie dann auch etliche andere Latinische nicht hieher heſetzt/ ob wol\linebreak
+		% https://www.etymonline.com/word/copious
+		auch die beſten vnder den ſelbigen \normalfont In Copia \fraktur verhanden. Und man findet allerhand Abschläge Teutſch Latiniſch Griechiſch und Hebraiſch zu vberlaſſen vnd zuuerkauffen/ zugieſſen aber\linebreak
+		ſind ſie ſamptlich verhanden. Verfertiget durch Conrad Berner Anno 1592 \normalfont \quad ☙ \enspace ❧
+	\end{minipage}
+}
 \end{document}
