@@ -1,0 +1,35 @@
+name: CI
+on:
+  - push
+
+jobs:
+  linux-build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Updates
+      run: sudo apt-get update
+
+    - name: Dependencies
+      run: sudo apt-get install texlive-latex-base texlive-luatex texlive-latex-extra
+
+    - name: Github Action for wget
+      run: |
+        wget https://github.com/georgd/EB-Garamond/releases/download/nightly/EBGaramond.zip
+        unzip EBGaramond.zip -d /usr/share/fonts/
+        wget https://www.1001fonts.com/download/theano-old-style.zip
+        unzip theano-old-style.zip -d /usr/share/fonts/
+        wget https://www.1001fonts.com/download/font/zentenar-fraktur.regular.ttf
+        mv zentenar-fraktur.regular.ttf /usr/share/fonts/
+        lualatex -interaction=nonstopmode specimen.tex
+
+    - name: Upload to Github Artifacts
+      if: github.event_name == 'push' || github.event_name == 'pull_request'
+      uses: actions/upload-artifact@v3
+      with:
+        name: Egenolff_Berner_specimen
+        path: specimen.pdf
