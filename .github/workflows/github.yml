@@ -33,3 +33,12 @@ jobs:
       with:
         name: Egenolff_Berner_specimen
         path: specimen.pdf
+
+    # Publishes the PDF as a release
+    # https://gist.github.com/m516/550faa3a080c6c2d5daadc4678d81a79
+    - name: Publish PDF
+      uses: softprops/action-gh-release@v1
+      # if: startsWith(github.ref, 'refs/tags/')
+      with:
+        tag_name: nightly
+        files: specimen.pdf
