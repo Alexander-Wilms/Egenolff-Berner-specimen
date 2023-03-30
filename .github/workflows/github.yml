@@ -18,7 +18,7 @@ jobs:
     - name: Dependencies
       run: sudo apt-get install texlive-latex-base texlive-luatex texlive-latex-extra
 
-    - name: Github Action for wget
+    - name: Compile document
       run: |
         wget https://github.com/georgd/EB-Garamond/releases/download/nightly/EBGaramond.zip
         unzip EBGaramond.zip -d /usr/share/fonts/
@@ -39,7 +39,6 @@ jobs:
     # https://gist.github.com/m516/550faa3a080c6c2d5daadc4678d81a79
     - name: Publish PDF
       uses: softprops/action-gh-release@v1
-      # if: startsWith(github.ref, 'refs/tags/')
       with:
         tag_name: nightly
         files: specimen.pdf
