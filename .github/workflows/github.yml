@@ -16,7 +16,7 @@ jobs:
       run: sudo apt-get update
 
     - name: Dependencies
-      run: sudo apt-get install texlive-latex-base texlive-luatex texlive-latex-extra
+      run: sudo apt-get install texlive-latex-base texlive-luatex texlive-latex-extra poppler-utils
 
     - name: Compile document
       run: |
