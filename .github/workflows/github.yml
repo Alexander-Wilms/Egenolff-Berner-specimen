@@ -27,13 +27,16 @@ jobs:
         wget https://www.1001fonts.com/download/font/zentenar-fraktur.regular.ttf
         mv zentenar-fraktur.regular.ttf /usr/share/fonts/
         lualatex -interaction=nonstopmode specimen.tex
+        convert specimen.pdf specimen.png
 
     - name: Upload to Github Artifacts
       if: github.event_name == 'push' || github.event_name == 'pull_request'
       uses: actions/upload-artifact@v3
       with:
         name: Egenolff_Berner_specimen
-        path: specimen.pdf
+        path: |
+          specimen.pdf
+          specimem.png
 
     # Publishes the PDF as a release
     # https://gist.github.com/m516/550faa3a080c6c2d5daadc4678d81a79
@@ -41,4 +44,6 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         tag_name: nightly
-        files: specimen.pdf
+        files: |
+          specimen.pdf
+          specimen.png
