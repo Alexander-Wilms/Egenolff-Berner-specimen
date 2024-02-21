@@ -6,6 +6,9 @@ The goal of this project is to recreate the Egenolff-Berner specimen of the Gara
 
 [specimen.pdf](https://github.com/Alexander-Wilms/Egenolff-Berner-specimen/releases/download/nightly/specimen.pdf)
 
+## Preview
+![img](https://github.com/Alexander-Wilms/Egenolff-Berner-specimen/releases/download/nightly/specimen.png)
+
 ## Sources
 
 * [Universitätsbibliothek Goethe Universität Frankfurt am Main](https://sammlungen.ub.uni-frankfurt.de/drucke/content/titleinfo/7499387)
