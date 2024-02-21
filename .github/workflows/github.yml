@@ -28,7 +28,7 @@ jobs:
         mv zentenar-fraktur.regular.ttf /usr/share/fonts/
         lualatex -interaction=nonstopmode specimen.tex
         # https://askubuntu.com/questions/50170/how-to-convert-pdf-to-image
-        pdftoppm specimen.pdf specimen.png
+        pdftoppm specimen.pdf specimen -png -f 1 -singlefile
         tree
           
     # Publishes the PDF as a release
