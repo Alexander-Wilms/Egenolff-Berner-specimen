@@ -16,7 +16,7 @@ jobs:
       run: sudo apt-get update
 
     - name: Dependencies
-      run: sudo apt-get install texlive-latex-base texlive-luatex texlive-latex-extra poppler-utils
+      run: sudo apt-get install texlive-latex-base texlive-luatex texlive-latex-extra poppler-utils tree
 
     - name: Compile document
       run: |
@@ -29,16 +29,8 @@ jobs:
         lualatex -interaction=nonstopmode specimen.tex
         # https://askubuntu.com/questions/50170/how-to-convert-pdf-to-image
         pdftoppm specimen.pdf outputname -png
-
-    - name: Upload to Github Artifacts
-      if: github.event_name == 'push' || github.event_name == 'pull_request'
-      uses: actions/upload-artifact@v3
-      with:
-        name: Egenolff_Berner_specimen
-        path: |
-          specimen.pdf
-          specimem.png
-
+        tree
+          
     # Publishes the PDF as a release
     # https://gist.github.com/m516/550faa3a080c6c2d5daadc4678d81a79
     - name: Publish PDF
