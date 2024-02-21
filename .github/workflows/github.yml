@@ -27,10 +27,8 @@ jobs:
         wget https://www.1001fonts.com/download/font/zentenar-fraktur.regular.ttf
         mv zentenar-fraktur.regular.ttf /usr/share/fonts/
         lualatex -interaction=nonstopmode specimen.tex
-        # work around ImageMagick issue:
-        # https://stackoverflow.com/questions/52998331/imagemagick-security-policy-pdf-blocking-conversion#comment110879511_59193253
-        sed -i '/disable ghostscript format types/,+6d' /etc/ImageMagick-6/policy.xml
-        convert specimen.pdf specimen.png
+        # https://askubuntu.com/questions/50170/how-to-convert-pdf-to-image
+        pdftoppm specimen.pdf outputname -png
 
     - name: Upload to Github Artifacts
       if: github.event_name == 'push' || github.event_name == 'pull_request'
